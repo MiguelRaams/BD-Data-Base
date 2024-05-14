@@ -1,0 +1,12 @@
+window_sizes 1924 1050 450 1467 820 168
+
+diagrams
+  active  classdiagram_ref 128228 // MUSISYS1
+    1452 1016 150 A4 0 0
+end
+show_stereotypes
+selected classdiagram_ref 128228 // MUSISYS1
+open
+  classview_ref 128228 // MUSISYS1
+end
+end

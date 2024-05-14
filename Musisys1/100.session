@@ -1,0 +1,30 @@
+window_sizes 1920 991 450 1464 937 0
+
+diagrams
+  active  classdiagram_ref 128228 // MUSISYS1
+    1464 937 97 A2 3 0
+end
+show_stereotypes
+selected attribute_ref 153188 // localidade
+open
+  classrelation_ref 138724 // <composition>
+  class_ref 128356 // Individual
+  class_ref 128484 // Grupo
+  class_ref 128612 // Tema
+  class_ref 128868 // Tecnico
+  classrelation_ref 130532 // (participam)
+  classrelation_ref 130148 // (tecnificam)
+  attribute_ref 139364 // cachet
+  class_ref 129508 // Espectador
+  class_ref 129636 // Jornalista
+  class_ref 129764 // Entrevista
+  class_ref 129892 // Bilhete
+  class_ref 130020 // Pagante
+  class_ref 130148 // Convidado
+  class_ref 136804 // Dia
+  class_ref 136932 // Tipo_bilhete
+  class_ref 137316 // Espectador_bilhete
+  class_ref 143844 // Nacionalidade
+  class_ref 143972 // Localidade
+end
+end

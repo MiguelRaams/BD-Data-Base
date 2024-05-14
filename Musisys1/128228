@@ -1,0 +1,1067 @@
+format 224
+"MUSISYS1" // MUSISYS1
+  revision 9
+  modified_by 15 "joelm"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  classview 128228 "MUSISYS1"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 128228 "MUSISYS1"
+      classdiagramsettings draw_all_relations no member_max_width 0 end
+      size A2
+    end
+
+    class 128228 "Participante"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128228 "codigo_participante"
+	private explicit_type "int(11)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128356 "nome_participante"
+	private explicit_type "varchar(255)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128484 "estilo_participante"
+	private explicit_type "varchar(255)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128612 "inicio_prev"
+	private explicit_type "datetime"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128740 "fim_prev"
+	private explicit_type "datetime"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 128228 // <association>
+	relation 128228 ----
+	  a role_name "" private
+	    classrelation_ref 128228 // <association>
+	  b role_name "" private
+	    classrelation_ref 128356 // <association>
+      end
+
+      classrelation 128356 // <association>
+	relation_ref 128228 // <association>
+      end
+
+      classrelation 128484 // (convite)
+	relation 128356 ---- name "convite"
+	  a role_name "" multiplicity "0..1" private
+	    classrelation_ref 128484 // (convite)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 128612 // (convite)
+      end
+
+      classrelation 128612 // (convite)
+	relation_ref 128356 // convite
+      end
+
+      classrelation 129124 // (tocam)
+	relation 128740 ---- name "tocam"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 129124 // (tocam)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 129252 // (tocam)
+      end
+
+      classrelation 129508 // orientam
+	relation_ref 128868 // orientam
+      end
+
+      classrelation 130404 // (participam)
+	relation 129508 ---- name "participam"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 130404 // (participam)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 130532 // (participam)
+	  association_type class_ref 129380 // Participacao
+      end
+
+      classrelation 131172 // entrevista
+	relation_ref 129892 // entrevista
+      end
+
+      classrelation 138468 // (participam)
+	relation 136932 ---- name "participam"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 138468 // (participam)
+	  b role_name "" multiplicity "4..8" private
+	    classrelation_ref 138596 // (participam)
+	  association_type class_ref 129380 // Participacao
+      end
+
+      classrelation 138724 // <composition>
+	relation 137060 *---
+	  a role_name "" private
+	    classrelation_ref 138724 // <composition>
+	  b role_name "" private
+	    classrelation_ref 138852 // <composition>
+      end
+    end
+
+    class 128356 "Individual"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128996 "nome_artista"
+	private explicit_type "varchar(255)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129124 "papel"
+	private explicit_type "varchar(255)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129252 "instrumento"
+	private explicit_type "varchar(255)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 128740 // <generalisation>
+	relation 128484 ---|>
+	  a public
+	    classrelation_ref 128740 // <generalisation>
+	  b parent class_ref 128228 // Participante
+      end
+
+      classrelation 128996 // <composition>
+	relation_ref 128612 // <composition>
+      end
+
+      classrelation 149604 // (nascido)
+	relation 146148 ---- name "nascido"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 149604 // (nascido)
+	  b role_name "" multiplicity "1..*" private
+	    classrelation_ref 149732 // (nascido)
+      end
+    end
+
+    class 128484 "Grupo"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129380 "num_elementos"
+	private explicit_type "int(11)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 128868 // <composition>
+	relation 128612 *---
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 128868 // <composition>
+	  b role_name "" multiplicity "0..1" private
+	    classrelation_ref 128996 // <composition>
+      end
+
+      classrelation 149476 // <generalisation>
+	relation 146020 ---|>
+	  a public
+	    classrelation_ref 149476 // <generalisation>
+	  b parent class_ref 128228 // Participante
+      end
+    end
+
+    class 128612 "Tema"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 129252 // (tocam)
+	relation_ref 128740 // tocam
+      end
+
+      attribute 129508 "titulo"
+	private explicit_type "varchar(255)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 146276 "ordem"
+	private explicit_type "int(11)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 128740 "Roadie"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 129380 // (orientam)
+	relation 128868 ---- name "orientam"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 129380 // (orientam)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 129508 // orientam
+      end
+
+      classrelation 129636 // <generalisation>
+	relation 128996 ---|>
+	  a public
+	    classrelation_ref 129636 // <generalisation>
+	  b parent class_ref 128868 // Tecnico
+      end
+    end
+
+    class 128868 "Tecnico"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129636 "num_tecnico"
+	private explicit_type "int(11)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129764 "nome_tecnico"
+	private explicit_type "varchar(255)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 130276 // tecnificam
+	relation_ref 129380 // tecnificam
+      end
+    end
+
+    class 128996 "Organizacao"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 129764 // <generalisation>
+	relation 129124 ---|>
+	  a public
+	    classrelation_ref 129764 // <generalisation>
+	  b parent class_ref 128868 // Tecnico
+      end
+    end
+
+    class 129124 "Festival"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129892 "edicao_festival"
+	private explicit_type "int(11)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130020 "nome_festival"
+	private explicit_type "varchar(255)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130404 "lotacao"
+	private explicit_type "int(11)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 129892 // <composition>
+	relation 129252 *---
+	  a role_name "" multiplicity "1..7" private
+	    classrelation_ref 129892 // <composition>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 130020 // <composition>
+      end
+
+      classrelation 130532 // (participam)
+	relation_ref 129508 // participam
+      end
+
+      classrelation 130660 // <association>
+	relation 129636 ----
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 130660 // <association>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 130788 // <association>
+      end
+
+      classrelation 149092 // <composition>
+	relation_ref 145764 // <composition>
+      end
+
+      classrelation 149220 // <aggregation>
+	relation 145892 o---
+	  a role_name "" multiplicity "1..*" private
+	    classrelation_ref 149220 // <aggregation>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 149348 // <aggregation>
+      end
+
+      classrelation 149988 // <association>
+	relation_ref 146276 // <association>
+      end
+    end
+
+    class 129252 "Palco"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 130788 "codigo_palco"
+	private explicit_type "int(11)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130916 "nome_palco"
+	private explicit_type "varchar(255)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 130020 // <composition>
+	relation_ref 129252 // <composition>
+      end
+
+      classrelation 130148 // (tecnificam)
+	relation 129380 ---- name "tecnificam"
+	  a role_name "" multiplicity "1..*" private
+	    classrelation_ref 130148 // (tecnificam)
+	  b role_name "" multiplicity "1..*" private
+	    classrelation_ref 130276 // tecnificam
+      end
+
+      classrelation 138596 // (participam)
+	relation_ref 136932 // participam
+      end
+    end
+
+    class 129380 "Participacao"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 139364 "cachet"
+	private explicit_type "int(11)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 139236 "hora"
+	private explicit_type "time"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 138852 // <composition>
+	relation_ref 137060 // <composition>
+      end
+
+      classrelation 139748 // <composition>
+	relation 137572 *---
+	  a role_name "" private
+	    classrelation_ref 139748 // <composition>
+	  b role_name "" private
+	    classrelation_ref 139876 // <composition>
+      end
+
+      classrelation 148836 // atuacao
+	relation_ref 145636 // atuacao
+      end
+    end
+
+    class 129508 "Espectador"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 131044 "id_espectador"
+	private explicit_type "int(11)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131172 "genero"
+	private explicit_type "varchar(255)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 130788 // <association>
+	relation_ref 129636 // <association>
+      end
+    end
+
+    class 129636 "Jornalista"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 131300 "num_car_jor"
+	private explicit_type "int(11)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131428 "media"
+	private explicit_type "varchar(255)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131556 "num_liv_trans"
+	private explicit_type "int(11)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 130916 // <generalisation>
+	relation 129764 ---|>
+	  a public
+	    classrelation_ref 130916 // <generalisation>
+	  b parent class_ref 129508 // Espectador
+      end
+
+      classrelation 131044 // (entrevista)
+	relation 129892 ---- name "entrevista"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 131044 // (entrevista)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 131172 // entrevista
+	  association_type class_ref 129764 // Entrevista
+      end
+    end
+
+    class 129764 "Entrevista"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 131684 "data"
+	private explicit_type "date"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131812 "hora"
+	private explicit_type "time"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 129892 "Bilhete"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 131940 "num_serie"
+	private explicit_type "int(11)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 139364 // <composition>
+	relation_ref 137316 // <composition>
+      end
+
+      classrelation 148068 // pertence
+	relation_ref 145252 // pertence
+      end
+
+      classrelation 148196 // (tem)
+	relation 145380 ---- name "tem"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 148196 // (tem)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 148324 // (tem)
+      end
+    end
+
+    class 130020 "Pagante"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 132196 "idade_pagante"
+	private explicit_type "int(11)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 141028 // <generalisation>
+	relation 138340 ---|>
+	  a public
+	    classrelation_ref 141028 // <generalisation>
+	  b parent class_ref 137316 // Espectador_bilhete
+	  association_type class_ref 150500 // Devolucao
+      end
+
+      classrelation 134927 // <association>
+	relation_ref 134671 // <association>
+      end
+    end
+
+    class 130148 "Convidado"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 132324 "profissao"
+	private explicit_type "varchar(255)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 141156 // <generalisation>
+	relation 138468 ---|>
+	  a public
+	    classrelation_ref 141156 // <generalisation>
+	  b parent class_ref 137316 // Espectador_bilhete
+      end
+    end
+
+    class 136804 "Dia"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 139876 // <composition>
+	relation_ref 137572 // <composition>
+      end
+
+      classrelation 140004 // <composition>
+	relation 137700 *---
+	  a role_name "" private
+	    classrelation_ref 140004 // <composition>
+	  b role_name "" private
+	    classrelation_ref 140132 // <composition>
+      end
+
+      attribute 139620 "data_dia"
+	private explicit_type "date"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 148452 // (associado)
+	relation 145508 ---- name "associado"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 148452 // (associado)
+	  b role_name "" multiplicity "1..*" private
+	    classrelation_ref 148580 // (associado)
+      end
+
+      classrelation 148708 // (atuacao)
+	relation 145636 ---- name "atuacao"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 148708 // (atuacao)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 148836 // atuacao
+      end
+
+      classrelation 148964 // <composition>
+	relation 145764 *---
+	  a role_name "" private
+	    classrelation_ref 148964 // <composition>
+	  b role_name "" private
+	    classrelation_ref 149092 // <composition>
+      end
+
+      classrelation 149348 // <aggregation>
+	relation_ref 145892 // <aggregation>
+      end
+    end
+
+    class 136932 "Tipo_bilhete"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 139236 // <composition>
+	relation 137316 *---
+	  a role_name "" private
+	    classrelation_ref 139236 // <composition>
+	  b role_name "" private
+	    classrelation_ref 139364 // <composition>
+      end
+
+      attribute 139492 "preco_bilhete"
+	private explicit_type "float(11)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 140132 // <composition>
+	relation_ref 137700 // <composition>
+      end
+
+      classrelation 148324 // (tem)
+	relation_ref 145380 // tem
+      end
+
+      attribute 146148 "tipo"
+	private explicit_type "varchar(255)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 148580 // (associado)
+	relation_ref 145508 // associado
+      end
+    end
+
+    class 137316 "Espectador_bilhete"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 147812 // <generalisation>
+	relation 145124 ---|>
+	  a public
+	    classrelation_ref 147812 // <generalisation>
+	  b parent class_ref 129508 // Espectador
+      end
+
+      classrelation 147940 // (pertence)
+	relation 145252 ---- name "pertence"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 147940 // (pertence)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 148068 // pertence
+	  association_explicit_type "Devolucao"
+      end
+    end
+
+    class 143844 "Nacionalidade"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 149732 // (nascido)
+	relation_ref 146148 // nascido
+      end
+
+      attribute 146404 "pais"
+	private explicit_type "varchar(255)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 143972 "Localidade"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 149860 // <association>
+	relation 146276 ----
+	  a role_name "" multiplicity "1..*" private
+	    classrelation_ref 149860 // <association>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 149988 // <association>
+      end
+
+      attribute 146532 "pais_localidade"
+	private explicit_type "varchar(255)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 146660 "local"
+	private explicit_type "varchar(255)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 153188 "localidade"
+	private explicit_type "varchar(255)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 150500 "Devolucao"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 159716 "estado"
+	private explicit_type "varchar(3)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 134799 // <association>
+	relation 134671 ----
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 134799 // <association>
+	  b role_name "" multiplicity "0..1" private
+	    classrelation_ref 134927 // <association>
+      end
+    end
+  end
+end

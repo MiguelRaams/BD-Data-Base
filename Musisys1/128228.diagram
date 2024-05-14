@@ -1,0 +1,230 @@
+format 224
+
+classcanvas 128100 class_ref 128228 // Participante
+  classdiagramsettings member_max_width 0 end
+  xyz 768.8 522.96 2000
+end
+classcanvas 129636 class_ref 128356 // Individual
+  classdiagramsettings member_max_width 0 end
+  xyz 1054.83 335.01 2000
+end
+classcanvas 129892 class_ref 128484 // Grupo
+  classdiagramsettings member_max_width 0 end
+  xyz 1051.27 490.33 2000
+end
+classcanvas 130148 class_ref 128612 // Tema
+  classdiagramsettings member_max_width 0 end
+  xyz 1042.7 571.69 2000
+end
+classcanvas 130404 class_ref 128740 // Roadie
+  classdiagramsettings member_max_width 0 end
+  xyz 793.92 717.45 2000
+end
+classcanvas 130660 class_ref 128868 // Tecnico
+  classdiagramsettings member_max_width 0 end
+  xyz 560.47 664.47 2000
+end
+classcanvas 130916 class_ref 128996 // Organizacao
+  classdiagramsettings member_max_width 0 end
+  xyz 568.02 807.96 2000
+end
+classcanvas 131172 class_ref 129124 // Festival
+  classdiagramsettings member_max_width 0 end
+  xyz 313.14 348.12 2000
+end
+classcanvas 131300 class_ref 129252 // Palco
+  classdiagramsettings member_max_width 0 end
+  xyz 363.42 561.41 2000
+end
+classcanvas 131940 class_ref 129380 // Participacao
+  classdiagramsettings member_max_width 0 end
+  xyz 518.65 472.57 2000
+end
+classcanvas 132196 class_ref 129508 // Espectador
+  classdiagramsettings member_max_width 0 end
+  xyz 572.4 325.95 2000
+end
+classcanvas 132452 class_ref 129636 // Jornalista
+  classdiagramsettings member_max_width 0 end
+  xyz 751 328.27 2000
+end
+classcanvas 132836 class_ref 129764 // Entrevista
+  classdiagramsettings member_max_width 0 end
+  xyz 885.65 401.62 2000
+end
+classcanvas 133220 class_ref 129892 // Bilhete
+  classdiagramsettings member_max_width 0 end
+  xyz 519.08 155.2 2000
+end
+classcanvas 133348 class_ref 130020 // Pagante
+  classdiagramsettings member_max_width 0 end
+  xyz 945.55 123.06 2000
+end
+classcanvas 133732 class_ref 130148 // Convidado
+  classdiagramsettings member_max_width 0 end
+  xyz 904.05 234.8 2000
+end
+classcanvas 135140 class_ref 136804 // Dia
+  classdiagramsettings member_max_width 0 end
+  xyz 328.49 237.67 2006
+end
+classcanvas 135268 class_ref 136932 // Tipo_bilhete
+  classdiagramsettings member_max_width 0 end
+  xyz 572.58 18.67 2000
+end
+classcanvas 136548 class_ref 137316 // Espectador_bilhete
+  classdiagramsettings member_max_width 0 end
+  xyz 540.79 266.81 2000
+end
+classcanvas 138468 class_ref 143844 // Nacionalidade
+  classdiagramsettings member_max_width 0 end
+  xyz 1268.83 216.14 2000
+end
+classcanvas 138724 class_ref 143972 // Localidade
+  classdiagramsettings member_max_width 0 end
+  xyz 212.09 618.92 2000
+end
+classcanvas 138980 class_ref 150500 // Devolucao
+  classdiagramsettings member_max_width 0 end
+  xyz 1117.54 85.83 2000
+end
+relationcanvas 128527 relation_ref 134671 // <association>
+  from ref 138980 z 2001 to ref 133348
+  no_role_a no_role_b
+  multiplicity_a_pos 1052 141 3000 multiplicity_b_pos 1083 125 3000
+end
+relationcanvas 129252 relation_ref 128356 // convite
+  decenter_begin 68
+  from ref 128100 z 2001 to point 765.2 504.6
+  line 128655 z 2001 label "convite" italic max_width 255 xyz 730 495 2001 to point 737.4 520.8
+  line 129380 z 2001 to point 649.6 578
+  line 129508 z 2001 to ref 128100
+  no_role_a no_role_b
+  multiplicity_a_pos 731 590 3000 multiplicity_b_pos 752 498 3000
+end
+relationcanvas 129764 relation_ref 128484 // <generalisation>
+  from ref 129636 z 2001 to ref 128100
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 130020 relation_ref 128612 // <composition>
+  from ref 129892 z 2001 to ref 129636
+  no_role_a no_role_b
+  multiplicity_a_pos 1082 428 3000 multiplicity_b_pos 1069 470 3000
+end
+relationcanvas 130276 relation_ref 128740 // tocam
+  from ref 128100 z 2001 label "tocam" italic max_width 255 xyz 948 580 2001 to ref 130148
+  no_role_a no_role_b
+  multiplicity_a_pos 1023 611 3000 multiplicity_b_pos 907 598 3000
+end
+relationcanvas 130532 relation_ref 128868 // orientam
+  from ref 130404 z 2001 label "orientam" italic max_width 255 xyz 796 658 2001 to ref 128100
+  no_role_a no_role_b
+  multiplicity_a_pos 805 655 3000 multiplicity_b_pos 803 695 3000
+end
+relationcanvas 130788 relation_ref 128996 // <generalisation>
+  from ref 130404 z 2001 to ref 130660
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 131044 relation_ref 129124 // <generalisation>
+  from ref 130916 z 2001 to ref 130660
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 131428 relation_ref 129252 // <composition>
+  from ref 131172 z 2001 to ref 131300
+  no_role_a no_role_b
+  multiplicity_a_pos 363 540 3000 multiplicity_b_pos 352 441 3000
+end
+relationcanvas 131556 relation_ref 129380 // tecnificam
+  from ref 131300 z 2001 label "tecnificam" italic max_width 255 xyz 484 623 2001 to ref 130660
+  no_role_a no_role_b
+  multiplicity_a_pos 527 689 3000 multiplicity_b_pos 467 634 3000
+end
+relationcanvas 132324 relation_ref 129636 // <association>
+  from ref 131172 z 2001 to ref 132196
+  no_role_a no_role_b
+  multiplicity_a_pos 556 372 3000 multiplicity_b_pos 418 392 3000
+end
+relationcanvas 132580 relation_ref 129764 // <generalisation>
+  from ref 132452 z 2001 to ref 132196
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 132708 relation_ref 129892 // entrevista
+  decenter_end 326
+  from ref 132452 z 2001 label "entrevista" italic max_width 255 xyz 774 451 2001 to ref 128100
+  no_role_a no_role_b
+  multiplicity_a_pos 790 498 3000 multiplicity_b_pos 784 425 3000
+end
+relationcanvas 134500 relation_ref 136932 // participam
+  decenter_begin 875
+  from ref 128100 z 2001 label "participam" italic max_width 255 xyz 579 596 2001 to ref 131300
+  no_role_a no_role_b
+  multiplicity_a_pos 465 610 3000 multiplicity_b_pos 731 641 3000
+end
+relationcanvas 136932 relation_ref 138340 // <generalisation>
+  from ref 133348 z 2001 to ref 136548
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 137060 relation_ref 138468 // <generalisation>
+  from ref 133732 z 2001 to ref 136548
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 137444 relation_ref 145124 // <generalisation>
+  from ref 136548 z 2001 to ref 132196
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 137572 relation_ref 145252 // pertence
+  from ref 136548 z 2001 label "pertence" italic max_width 255 xyz 553 219 2001 to ref 133220
+  no_role_a no_role_b
+  multiplicity_a_pos 553 214 3000 multiplicity_b_pos 574 244 3000
+end
+relationcanvas 137700 relation_ref 145380 // tem
+  decenter_begin 513
+  from ref 133220 z 2001 label "tem" italic max_width 255 xyz 566 103 2001 to ref 135268
+  no_role_a no_role_b
+  multiplicity_a_pos 570 96 3000 multiplicity_b_pos 543 131 3000
+end
+relationcanvas 137828 relation_ref 145508 // associado
+  from ref 135140 z 2007 label "associado" italic max_width 255 xyz 449 147 2007 to ref 135268
+  no_role_a no_role_b
+  multiplicity_a_pos 557 86 3000 multiplicity_b_pos 396 240 3000
+end
+relationcanvas 137956 relation_ref 145636 // atuacao
+  from ref 135140 z 2007 label "atuacao" italic max_width 255 xyz 435 366 2007 to ref 131940
+  no_role_a no_role_b
+  multiplicity_a_pos 509 449 3000 multiplicity_b_pos 364 296 3000
+end
+relationcanvas 138212 relation_ref 145892 // <aggregation>
+  from ref 131172 z 2007 to ref 135140
+  no_role_a no_role_b
+  multiplicity_a_pos 329 295 3000 multiplicity_b_pos 342 330 3000
+end
+relationcanvas 138340 relation_ref 146020 // <generalisation>
+  from ref 129892 z 2001 to ref 128100
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 138596 relation_ref 146148 // nascido
+  from ref 129636 z 2001 label "nascido" italic max_width 255 xyz 1185 293 2001 to ref 138468
+  no_role_a no_role_b
+  multiplicity_a_pos 1258 267 3000 multiplicity_b_pos 1150 352 3000
+end
+relationcanvas 138852 relation_ref 146276 // <association>
+  decenter_end 259
+  from ref 138724 z 2001 to ref 131172
+  no_role_a no_role_b
+  multiplicity_a_pos 304 443 3000 multiplicity_b_pos 259 597 3000
+end
+line 132964 -_-_
+  from ref 132708 z 2002 to ref 132836
+line 133092 -_-_
+  from ref 132708 z 2002 to ref 132836
+line 134628 -_-_
+  from ref 131940 z 2002 to ref 134500
+end

@@ -1,0 +1,15 @@
+window_sizes 1920 991 261 1653 862 75
+
+diagrams
+  active  classdiagram_ref 128228 // MUSISYS1
+    1653 862 80 A2 0 0
+end
+show_stereotypes
+selected 
+  package_ref 129 // MUSISYS1
+open
+  class_ref 129892 // Bilhete
+  class_ref 130020 // Pagante
+  class_ref 150500 // Devolucao
+end
+end
