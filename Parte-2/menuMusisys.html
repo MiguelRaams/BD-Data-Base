@@ -1,0 +1,55 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<head>
+<title>Musisys</title>
+</head>
+
+<body>
+<center>
+<h3>Por favor escolha uma das seguintes operações:</h3>
+
+<p>
+<form action=registarEdicao.html>
+<input type=submit value="Registar Edição">
+</form>
+<br/>
+
+
+
+<br/>
+
+<form action=pesquisaBásica.php method="post">
+<label for="codigo"> Pesquisar artistas por código: </label>
+<input type="number" name="codigo" size="10" maxlength="10">
+<input type=submit value="OK">
+</form>
+</p>
+<br/>
+
+<p>
+    <form action=pesquisaAvançada.php method="post">
+    <label for="Desi"> Pesquisar artistas Avançada: </label>
+    <br/>
+    <label for="Codigo_Palco"> Código Palco: </label>
+    <input type="number" name="codigo" size="10" maxlength="10">
+    <br/>
+    <label for="num_min_entre"> Número Mínimo de Entrevistas: </label>
+    <input type="number" name="num_min_entre" size="10" maxlength="10">
+    <br/>
+    <input type=submit value="OK">
+    </form>
+    <br/>
+
+
+    <br/>
+
+<form action=ListarEdicoes.php method="post">
+    <input type=submit value="Listar Futuras Edições">
+    </form>
+    </p>
+    <br/>
+
+
+</center>
+</body>
+</html>
